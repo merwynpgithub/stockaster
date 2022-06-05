@@ -10,8 +10,8 @@ function Picker({ stockDetails }) {
       <div>
         <h3>{stockDetails.Name}</h3>
         {valueIndex > 0 && <h4>{stockDetails.Symbol} is <span style={{color: "red", fontWeight: "bold"}}>UNDERVALUED</span> and is trading below its 200 MA by {valueIndexPercent}</h4>}
-        <div style={{display: "flex", justifyContent: "space-between", flexWrap: "wrap"}}>
-          <div style={{paddingLeft: "5%", width: "25%", minWidth: "200px", display: "flex", justifyContent: "space-between"}}>
+        <div style={{display: "flex", justifyContent: "space-between", flexWrap: "wrap", margin: "2%"}}>
+          <div style={{width: "25%", minWidth: "200px", display: "flex", justifyContent: "space-between"}}>
             <div>
               <p>Mkt Cap:</p>
               <p>PE (FWD):</p>
@@ -35,8 +35,8 @@ function Picker({ stockDetails }) {
               <p>{stockDetails.PriceToBookRatio}</p>
             </div>
           </div>
-          <div style={{paddingRight: "5%", width: "25%", display: "flex", justifyContent: "space-between"}}>
-          <div style={{width: "100px"}}>
+          <div style={{width: "35%", display: "flex", justifyContent: "space-between"}}>
+          <div style={{minWidth: "100px"}}>
               <p>50 SMA:</p>
               <p>200 SMA:</p>
               <p>Price:</p>
