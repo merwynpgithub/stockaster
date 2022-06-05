@@ -26,8 +26,8 @@ function Picker({ stockDetails }) {
           <div style={{width: "25%", display: "flex", justifyContent: "space-between"}}>
           <div>
               <p>EPS:</p>
-              <p>Price/Sales:</p>
-              <p>Price/Book:</p>
+              <p>P/Sales:</p>
+              <p>P/Book:</p>
             </div>
             <div>
               <p>{stockDetails.EPS}</p>
@@ -37,8 +37,8 @@ function Picker({ stockDetails }) {
           </div>
           <div style={{paddingRight: "5%", width: "25%", display: "flex", justifyContent: "space-between"}}>
           <div>
-              <p>50 Day SMA:</p>
-              <p>200 Day SMA:</p>
+              <p>50 SMA:</p>
+              <p>200 SMA:</p>
               <p>Price:</p>
             </div>
             <div>
