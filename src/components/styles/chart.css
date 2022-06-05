@@ -1,0 +1,40 @@
+.chart {
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.error {
+  position: relative;
+  top: 0.5em;
+  color: red;
+  font-size: 0.8em;
+  font-weight: 900;
+}
+
+.screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+}
+
+.big {
+  width: 60vw;
+  height: 550px;
+  margin: auto;
+  position: absolute;
+  top: 2%;
+  left: 15%;
+  z-index: 99;
+  background-color: white
+}
+
+.small {
+  height: 350px;
+  width: 425px;
+  position: relative;
+}
