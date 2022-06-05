@@ -13,7 +13,7 @@ function Picker({ stockDetails }) {
         <div style={{display: "flex", justifyContent: "space-between", flexWrap: "wrap"}}>
           <div style={{paddingLeft: "5%", width: "25%", minWidth: "200px", display: "flex", justifyContent: "space-between"}}>
             <div>
-              <p>Market Cap:</p>
+              <p>Mkt Cap:</p>
               <p>PE (FWD):</p>
               <p>PE (TTM):</p>
             </div>
@@ -36,7 +36,7 @@ function Picker({ stockDetails }) {
             </div>
           </div>
           <div style={{paddingRight: "5%", width: "25%", display: "flex", justifyContent: "space-between"}}>
-          <div>
+          <div style={{width: "100px"}}>
               <p>50 SMA:</p>
               <p>200 SMA:</p>
               <p>Price:</p>
