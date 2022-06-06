@@ -19,6 +19,9 @@ function App() {
   }
   return (
     <div className="App">
+      <div className="brand">
+        <img src="https://i.imgur.com/eiYgvzQ.png" alt="stockaster logo" />
+      </div>
       <div className="theme">
       <select value={theme} onChange={handleThemeChange}>
         <option value="light">Light</option>

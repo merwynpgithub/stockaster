@@ -1,6 +1,13 @@
 .App {
   text-align: center;
 }
+.brand {
+  position: absolute;
+  left: 0;
+}
+.brand img {
+  width: 50px;
+}
 .theme {
   position: absolute;
   right: 0;
