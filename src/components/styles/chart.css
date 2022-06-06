@@ -1,3 +1,14 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.metrics {
+  margin-bottom: 1.5em;
+}
+.metrics p {
+  margin: 0 0 5% 0;
+  padding: 0;
+  text-align: left;
+}
 .chart {
   margin-top: 50px;
   display: flex;
