@@ -28,7 +28,7 @@ const converter = (data, name, type, horizon ) => {
     labelData.reverse();
 
     const statData = [];
-    data[horizon].forEach(data => statData.push(Math.floor(parseInt(data.netIncome) / Math.pow(10, 9))));
+    data[horizon].forEach(data => statData.push(Number(parseInt(data.netIncome) / Math.pow(10, 9))));
     statData.reverse();
 
     return { labelData, labelName, statData };
