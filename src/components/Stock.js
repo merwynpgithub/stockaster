@@ -14,18 +14,26 @@ import './styles/chart.css';
 
 function Stock() {
   const [horizon, setHorizon] = useState("quarterlyReports");
+  const [ticker, setTicker] = useState("Microsoft");
 
-  function handleChange(e) {
+  function handleHorizonChange(e) {
     setHorizon(e.target.value);
-    console.log(e.target.value);
+  }
+  function handleTickerChange(e) {
+    setHorizon(e.target.value);
   }
   return (
     <>
+    <select value={ticker} onChange={handleTickerChange}>
+        <option value="Microsoft">Microsoft</option>
+        {/* <option value="Apple">Apple</option> */}
+      </select>
       <Picker stockDetails={msft_overview} />
-      <select value={horizon} onChange={handleChange}>
+      <select value={horizon} onChange={handleHorizonChange}>
         <option value="quarterlyReports">QUARTERLY</option>
         <option value="annualReports">ANNUAL</option>
       </select>
+      {ticker === "Microsoft" &&
       <div style={{display: "flex", justifyContent: "space-around", flexWrap: "wrap"}}>
       <div className="chart">
         <BarChart info={msft_inc1} name={"Microsoft"} type="revenue" horizon={horizon}/>
@@ -45,8 +53,8 @@ function Stock() {
       <div className="chart">
         <BarChart info={msft_bal1} name={"Microsoft"} type="stock" horizon={horizon}/>
       </div>
-
       </div>
+      } 
     </>
   )
 }

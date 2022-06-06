@@ -95,7 +95,7 @@ const converter = (data, name, type, horizon ) => {
 
     const statData = [];
     data[horizon].forEach(data => {
-      const stock = parseInt(data.commonStockSharesOutstanding) / Math.pow(10, 9);
+      const stock = parseFloat(((data.commonStockSharesOutstanding) / Math.pow(10, 9)).toFixed(2));
       statData.push(stock);
     });
     statData.reverse();
