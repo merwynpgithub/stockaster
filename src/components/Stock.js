@@ -17,6 +17,12 @@ import aapl_inc1 from '../data/aapl_inc1';
 import aapl_cf1 from '../data/aapl_cf1';
 import aapl_price from '../data/aapl_price';
 
+import nflx_overview from '../data/nflx_overview';
+import nflx_bal1 from '../data/nflx_bal1';
+import nflx_inc1 from '../data/nflx_inc1';
+import nflx_cf1 from '../data/nflx_cf1';
+import nflx_price from '../data/nflx_price';
+
 import './styles/chart.css';
 
 function Stock() {
@@ -49,12 +55,21 @@ function Stock() {
       setCf(aapl_cf1);
       setPrice(aapl_price);
     }
+    if (e.target.value == "Netflix") {
+      setTicker("Netflix");
+      setOverview(nflx_overview);
+      setBal(nflx_bal1);
+      setInc(nflx_inc1)
+      setCf(nflx_cf1);
+      setPrice(nflx_price);
+    }
   }
   return (
     <>
     <select value={ticker} onChange={handleTickerChange}>
       <option value="Microsoft">Microsoft</option>
       <option value="Apple">Apple</option>
+      <option value="Netflix">Netflix</option>
     </select>
       
       <Picker stockDetails={overview} stockPrice={price}/>
