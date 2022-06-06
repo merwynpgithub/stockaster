@@ -1,4 +1,4 @@
-{
+const msft_price = {
     "Meta Data": {
         "1. Information": "Weekly Prices (open, high, low, close) and Volumes",
         "2. Symbol": "MSFT",
@@ -8253,4 +8253,6 @@
             "5. volume": "270831600"
         }
     }
-}
+};
+
+export default msft_price;

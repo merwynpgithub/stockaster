@@ -9,6 +9,7 @@ import msft_overview from '../data/msft_overview';
 import msft_bal1 from '../data/msft_bal1';
 import msft_inc1 from '../data/msft_inc1';
 import msft_cf1 from '../data/msft_cf1';
+import msft_price from '../data/msft_price';
 
 import './styles/chart.css';
 
@@ -28,7 +29,7 @@ function Stock() {
         <option value="Microsoft">Microsoft</option>
         {/* <option value="Apple">Apple</option> */}
       </select>
-      <Picker stockDetails={msft_overview} />
+      <Picker stockDetails={msft_overview} stockPrice={msft_price}/>
       <select value={horizon} onChange={handleHorizonChange}>
         <option value="quarterlyReports">QUARTERLY</option>
         <option value="annualReports">ANNUAL</option>

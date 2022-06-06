@@ -1,9 +1,11 @@
 import React from "react";
+import priceConverter from '../components/helper/price-sorter';
 
-function Picker({ stockDetails }) {
+function Picker({ stockDetails, stockPrice }) {
   const sma200 = (Number(stockDetails["200DayMovingAverage"]));
   const valueIndex = (sma200 - 272.02) / sma200;
   const valueIndexPercent = parseInt(valueIndex * 100) + "%";
+  const currentStockPrice = priceConverter(stockPrice);
   return (
     <>
       
@@ -44,7 +46,7 @@ function Picker({ stockDetails }) {
             <div className="metrics">
               <p>{stockDetails["50DayMovingAverage"]}</p>
               <p>{stockDetails["200DayMovingAverage"]}</p>
-              <p>272.02</p>
+              <p>{currentStockPrice}</p>
             </div>
           </div>
         </div>
