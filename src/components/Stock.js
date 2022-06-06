@@ -26,14 +26,17 @@ function Stock() {
   return (
     <>
     <select value={ticker} onChange={handleTickerChange}>
-        <option value="Microsoft">Microsoft</option>
-        {/* <option value="Apple">Apple</option> */}
-      </select>
+      <option value="Microsoft">Microsoft</option>
+      {/* <option value="Apple">Apple</option> */}
+    </select>
+      {ticker === "Microsoft" &&
       <Picker stockDetails={msft_overview} stockPrice={msft_price}/>
+      }
       <select value={horizon} onChange={handleHorizonChange}>
         <option value="quarterlyReports">QUARTERLY</option>
         <option value="annualReports">ANNUAL</option>
       </select>
+
       {ticker === "Microsoft" &&
       <div style={{display: "flex", justifyContent: "space-around", flexWrap: "wrap"}}>
       <div className="chart">
