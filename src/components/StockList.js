@@ -14,13 +14,16 @@ shares outstanding
 
 function StockList() {
   const [symbol, setSymbol] = useState("");
+  const [saveticker, setSaveTicker] = useState("");
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(symbol);
+    if (!symbol || symbol === "") return;
+    console.log(symbol.toUpperCase());
+    setSaveTicker(symbol.toUpperCase());
   }
   return (
     <>
-    <StockSelector symbol={symbol} setSymbol={setSymbol} handleSubmit={handleSubmit}/>
+    <StockSelector symbol={symbol.toUpperCase()} setSymbol={setSymbol} handleSubmit={handleSubmit}/>
     <Stock />
     </>
   );
