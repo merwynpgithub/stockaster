@@ -1,4 +1,4 @@
-function StockSelector({ symbol, setSymbol, handleSubmit }) {
+function StockSelector({ symbol, setSymbol, handleSubmit, err }) {
 
   return (
     <>
@@ -7,7 +7,7 @@ function StockSelector({ symbol, setSymbol, handleSubmit }) {
       <input value={symbol} onChange={e => setSymbol(e.target.value.toLowerCase())} />
       <button type="submit">Search</button>
     </form>
-    {/* <div className="search-fill">{symbol}</div> */}
+    <div className="error">{err}</div>
     </div>
     </>
   );

@@ -25,7 +25,8 @@ import nflx_price from '../data/nflx_price';
 
 import './styles/chart.css';
 
-function Stock() {
+function Stock({ saveticker }) {
+  // console.log("Saveticker is", saveticker);
   const [horizon, setHorizon] = useState("quarterlyReports");
   const [ticker, setTicker] = useState("Microsoft");
   const [overview, setOverview] = useState(msft_overview);
@@ -37,6 +38,7 @@ function Stock() {
   function handleHorizonChange(e) {
     setHorizon(e.target.value);
   }
+  
   function handleTickerChange(e) {
     setTicker(e.target.value);
     if (e.target.value == "Microsoft") {
@@ -64,6 +66,10 @@ function Stock() {
       setPrice(nflx_price);
     }
   }
+  
+
+  
+  
   return (
     <>
     <select value={ticker} onChange={handleTickerChange}>
