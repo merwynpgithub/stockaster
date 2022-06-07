@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Stock from './Stock';
+import StockSelector from './StockSelector';
 
 /*
 fundas:
@@ -12,8 +13,14 @@ shares outstanding
 */
 
 function StockList() {
+  const [symbol, setSymbol] = useState("");
+  function handleSubmit(e) {
+    e.preventDefault();
+    console.log(symbol);
+  }
   return (
     <>
+    <StockSelector symbol={symbol} setSymbol={setSymbol} handleSubmit={handleSubmit}/>
     <Stock />
     </>
   );
