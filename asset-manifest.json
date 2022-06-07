@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.css": "/stockaster/static/css/main.1a05ddf0.css",
-    "main.js": "/stockaster/static/js/main.a251a0b9.js",
+    "main.css": "/stockaster/static/css/main.809a2946.css",
+    "main.js": "/stockaster/static/js/main.a9c5d919.js",
+    "static/media/stockaster.png": "/stockaster/static/media/stockaster.e8c2a588a096d2b9dccb.png",
     "index.html": "/stockaster/index.html",
-    "main.1a05ddf0.css.map": "/stockaster/static/css/main.1a05ddf0.css.map",
-    "main.a251a0b9.js.map": "/stockaster/static/js/main.a251a0b9.js.map"
+    "main.809a2946.css.map": "/stockaster/static/css/main.809a2946.css.map",
+    "main.a9c5d919.js.map": "/stockaster/static/js/main.a9c5d919.js.map"
   },
   "entrypoints": [
-    "static/css/main.1a05ddf0.css",
-    "static/js/main.a251a0b9.js"
+    "static/css/main.809a2946.css",
+    "static/js/main.a9c5d919.js"
   ]
 }
