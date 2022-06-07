@@ -11,6 +11,7 @@ body {
   text-align: left;
 }
 .chart {
+  /* margin: 50px 1% 0 1%; */
   margin-top: 50px;
   display: flex;
   flex-wrap: wrap;
@@ -29,24 +30,44 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: white;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.9;
+  z-index: 50;
 }
 
 .big {
-  width: 60vw;
-  height: 550px;
+  width: 50%;
   margin: auto;
   position: absolute;
-  top: 2%;
+  top: 15%;
   left: 15%;
   z-index: 99;
-  background-color: white
+  background-color: white;
 }
 
 .small {
   height: 350px;
-  width: 425px;
+  width: 400px;
+  padding-left: 10px;
+  padding-right: 20px;
   position: relative;
+}
+
+#grey-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: grey;
+  opacity: 0.8;
+  z-index: 50;
+}
+
+@media only screen and (max-width: 1200px) {
+  #big-screen {
+   display: none;
+  }
 }

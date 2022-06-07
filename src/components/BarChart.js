@@ -56,12 +56,13 @@ function BarChart({info, name, type, horizon}) {
     }
   };
 
-  function handleClick() {
+  function handleClick(e) {
     position === "small" ? setPosition("big") : setPosition("small");
   }
 
   return (
     <>
+    <div id="chart-div">
     {position === "big" &&
       <div className="screen">
         <div  className="big">
@@ -77,7 +78,7 @@ function BarChart({info, name, type, horizon}) {
     }
     {position === "small" && 
       <div  className="small" >
-        <div style={{display: "none"}}><button onClick={handleClick}>Enlarge</button></div>
+        <div><button id="big-screen" onClick={handleClick}>Enlarge</button></div>
         <Bar
           data={data}
           options={options}
@@ -86,6 +87,7 @@ function BarChart({info, name, type, horizon}) {
         />
       </div>
     }
+    </div>
     </>
   )
 }
