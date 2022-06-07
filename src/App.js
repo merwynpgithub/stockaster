@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import './App.css';
 import StockList from './components/StockList';
-import logo from './images/stockaster.png'
+import Intro from './components/Intro';
 
-import './components/styles/chart.css'
+import './components/styles/chart.css';
 
 function App() {
   const [theme, setTheme] = useState("light");
@@ -20,17 +20,7 @@ function App() {
   }
   return (
     <div className="App">
-      <div className="brand">
-        <img src={logo} alt="stockaster logo" />
-      </div>
-      <div className="theme">
-      <select value={theme} onChange={handleThemeChange}>
-        <option value="light">Light</option>
-        <option value="dark">Dark</option>
-      </select>
-      </div>
-      <h1>Stock Insights</h1>
-      <h2 style={{color: "#4682b4"}}><em>Warren Buffett: "Price is what you pay. Value is what you get."</em></h2>
+      <Intro theme={theme} handleThemeChange={handleThemeChange} setTheme={setTheme} />
       <StockList />
     </div>
   );
