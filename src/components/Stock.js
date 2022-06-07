@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import useApp from '../hooks/useApp';
 import Picker from './Picker';
@@ -24,6 +24,7 @@ import nflx_cf1 from '../data/nflx_cf1';
 import nflx_price from '../data/nflx_price';
 
 import './styles/chart.css';
+import axios from 'axios';
 
 function Stock({ saveticker }) {
   // console.log("Saveticker is", saveticker);
@@ -35,6 +36,12 @@ function Stock({ saveticker }) {
   const [cf, setCf] = useState(msft_cf1);
   const [price, setPrice] = useState(msft_price);
 
+  // useEffect(() => {
+  //   const url = ``;
+  //   axios.get(url)
+  //   .then(res => console.log(res.data));
+  // }, [ticker])
+
   function handleHorizonChange(e) {
     setHorizon(e.target.value);
   }
@@ -42,7 +49,6 @@ function Stock({ saveticker }) {
   function handleTickerChange(e) {
     setTicker(e.target.value);
     if (e.target.value == "Microsoft") {
-      setTicker("Microsoft");
       setOverview(msft_overview);
       setBal(msft_bal1);
       setInc(msft_inc1)
@@ -50,7 +56,6 @@ function Stock({ saveticker }) {
       setPrice(msft_price);
     }
     if (e.target.value == "Apple") {
-      setTicker("Apple");
       setOverview(aapl_overview);
       setBal(aapl_bal1);
       setInc(aapl_inc1)
@@ -58,7 +63,6 @@ function Stock({ saveticker }) {
       setPrice(aapl_price);
     }
     if (e.target.value == "Netflix") {
-      setTicker("Netflix");
       setOverview(nflx_overview);
       setBal(nflx_bal1);
       setInc(nflx_inc1)
