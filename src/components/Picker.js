@@ -11,8 +11,8 @@ function Picker({ stockDetails, stockPrice }) {
       
       <div>
         <h3>{stockDetails.Name}</h3>
-        {valueIndex > 0 && <h4>{stockDetails.Symbol} is <span style={{color: "red", fontWeight: "bold"}}>UNDERVALUED</span> and is trading below its 200 Day MA by {valueIndexPercent}</h4>}
-        {valueIndex <= 0 && <h4>{stockDetails.Symbol} is <span style={{color: "red", fontWeight: "bold"}}>NOT UNDERVALUED</span> and is trading around its 200 Day MA by {valueIndexPercent}</h4>}
+        {valueIndex > 0 && <h4>{stockDetails.Name} is <span style={{color: "red", fontWeight: "bold"}}>UNDERVALUED</span> and is trading below its 200 Day MA by {valueIndexPercent}</h4>}
+        {valueIndex <= 0 && <h4>{stockDetails.Name} is <span style={{color: "red", fontWeight: "bold"}}>NOT UNDERVALUED</span> and is trading around its 200 Day MA by {valueIndexPercent}</h4>}
         <div style={{display: "flex", justifyContent: "space-around", flexWrap: "wrap", margin: "2%"}}>
           <div style={{width: "25%", minWidth: "200px", display: "flex", justifyContent: "space-between"}}>
             <div className="metrics">
