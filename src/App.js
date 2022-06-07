@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import StockList from './components/StockList';
+import logo from './images/stockaster.png'
 
 import './components/styles/chart.css'
 
@@ -20,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <div className="brand">
-        <img src="https://i.imgur.com/eiYgvzQ.png" alt="stockaster logo" />
+        <img src={logo} alt="stockaster logo" />
       </div>
       <div className="theme">
       <select value={theme} onChange={handleThemeChange}>
