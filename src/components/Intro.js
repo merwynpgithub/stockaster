@@ -15,8 +15,8 @@ function Intro({ theme, handleThemeChange }) {
         <option value="dark">Dark</option>
       </select>
       </div>
-      <h1>Stock Insights</h1>
-      <h2 style={{color: "#4682b4"}}><em>Warren Buffett: "Price is what you pay. Value is what you get."</em></h2>
+      <h2>Stockaster - Stock Insights</h2>
+      <h3 style={{color: "#4682b4"}}><em>Warren Buffett: "Price is what you pay. Value is what you get."</em></h3>
     </>
   );
 }
