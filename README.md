@@ -1,3 +1,3 @@
-# Stockaster APP: Work in Progress
+# Stockaster APP
 
-App to show stock metrics in detailed graphs
+This is a static GH pages deployment app.
