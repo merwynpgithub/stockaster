@@ -7,49 +7,49 @@
 
 const converter = (data, name, type, horizon ) => {
   if (type === "revenue") {
-    const labelName = name + " Revenue (Billions)";
+    const labelName = name + " Revenue (Millions)";
 
     const labelData = [];
     data[horizon].forEach(data => labelData.push(data.fiscalDateEnding));
     labelData.reverse();
 
     const statData = [];
-    data[horizon].forEach(data => statData.push(Math.floor(parseInt(data.totalRevenue) / Math.pow(10, 9))));
+    data[horizon].forEach(data => statData.push(Math.floor(parseInt(data.totalRevenue) / Math.pow(10, 6))));
     statData.reverse();
 
     return { labelData, labelName, statData };
   }
 
   if (type === "net_income") {
-    const labelName = name + " Net Income (Billions)";
+    const labelName = name + " Net Income (Millions)";
 
     const labelData = [];
     data[horizon].forEach(data => labelData.push(data.fiscalDateEnding));
     labelData.reverse();
 
     const statData = [];
-    data[horizon].forEach(data => statData.push(Number(parseInt(data.netIncome) / Math.pow(10, 9))));
+    data[horizon].forEach(data => statData.push(Number(parseInt(data.netIncome) / Math.pow(10, 6))));
     statData.reverse();
 
     return { labelData, labelName, statData };
   }
 
   if (type === "ebitda") {
-    const labelName = name + " EBITDA (Billions)";
+    const labelName = name + " EBITDA (Millions)";
 
     const labelData = [];
     data[horizon].forEach(data => labelData.push(data.fiscalDateEnding));
     labelData.reverse();
 
     const statData = [];
-    data[horizon].forEach(data => statData.push(Math.floor(parseInt(data.ebitda) / Math.pow(10, 9))));
+    data[horizon].forEach(data => statData.push(Math.floor(Number(data.ebitda) / Math.pow(10, 6))));
     statData.reverse();
-
+    
     return { labelData, labelName, statData };
   }
 
   if (type === "cash_flow") {
-    const labelName = name + " Cash Flow (Billions)";
+    const labelName = name + " Cash Flow (Millions)";
 
     const labelData = [];
     data[horizon].forEach(data => labelData.push(data.fiscalDateEnding));
@@ -57,8 +57,8 @@ const converter = (data, name, type, horizon ) => {
 
     const statData = [];
     data[horizon].forEach(data => {
-      const opcf = parseInt(data.operatingCashflow) / Math.pow(10, 9);
-      const capex = parseInt(data.capitalExpenditures) / Math.pow(10, 9);
+      const opcf = parseInt(data.operatingCashflow) / Math.pow(10, 6);
+      const capex = parseInt(data.capitalExpenditures) / Math.pow(10, 6);
       const free_cf = opcf - capex;
       statData.push(free_cf);
     });
@@ -68,7 +68,7 @@ const converter = (data, name, type, horizon ) => {
   }
 
   if (type === "debt") {
-    const labelName = name + " Debt (Billions)";
+    const labelName = name + " Debt (Millions)";
 
     const labelData = [];
     data[horizon].forEach(data => labelData.push(data.fiscalDateEnding));
@@ -76,8 +76,8 @@ const converter = (data, name, type, horizon ) => {
 
     const statData = [];
     data[horizon].forEach(data => {
-      const longTermDebt = parseInt(data.longTermDebt) / Math.pow(10, 9);
-      const currentLiabilities = parseInt(data.totalCurrentLiabilities) / Math.pow(10, 9);
+      const longTermDebt = parseInt(data.longTermDebt) / Math.pow(10, 6);
+      const currentLiabilities = parseInt(data.totalCurrentLiabilities) / Math.pow(10, 6);
       const debt = longTermDebt + currentLiabilities;
       statData.push(debt);
     });
@@ -87,7 +87,7 @@ const converter = (data, name, type, horizon ) => {
   }
 
   if (type === "stock") {
-    const labelName = name + " Shares Outstanding (Billions)";
+    const labelName = name + " Shares Outstanding (Millions)";
 
     const labelData = [];
     data[horizon].forEach(data => labelData.push(data.fiscalDateEnding));
@@ -95,7 +95,7 @@ const converter = (data, name, type, horizon ) => {
 
     const statData = [];
     data[horizon].forEach(data => {
-      const stock = parseFloat(((data.commonStockSharesOutstanding) / Math.pow(10, 9)).toFixed(2));
+      const stock = parseFloat(((data.commonStockSharesOutstanding) / Math.pow(10, 6)).toFixed(2));
       statData.push(stock);
     });
     statData.reverse();
