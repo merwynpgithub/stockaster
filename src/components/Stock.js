@@ -25,7 +25,7 @@ function Stock() {
       <option value={stock.company} key={index}>{stock.company}</option>
     );
   });
-  function handleTickerChange2(e) {
+  function handleTickerChange(e) {
     const selectedTicker = stockTickerData.filter(data => data.company === e.target.value);
     setTicker(e.target.value);
     e.target.value === 'Microsoft' ? setOverview(selectedTicker[0].overview.default) : setOverview(selectedTicker[0].overview);
@@ -36,7 +36,7 @@ function Stock() {
   }
   return (
     <>
-    <select value={ticker} onChange={handleTickerChange2}>
+    <select value={ticker} onChange={handleTickerChange}>
       {stockOptions}
     </select>
       
